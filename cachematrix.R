@@ -1,5 +1,4 @@
 ## Creates special "matrix" object that can cache its inverse (solve(x)
-
 makeCacheMatrix <- function(x = matrix()) {
     m <- NULL
     set <- function(y) {
@@ -17,7 +16,6 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## Computes the inverse of "matrix" returned by `makeCacheMatrix` above. 
 ## If inverse has been calculated, retrieve  inverse from the cache
-
 cacheSolve <- function(x, ...) {
     m <- x$getinv()
     if (!is.null(m)) {
